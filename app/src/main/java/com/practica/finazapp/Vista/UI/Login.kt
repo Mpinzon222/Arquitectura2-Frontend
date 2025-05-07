@@ -20,7 +20,7 @@ import com.practica.finazapp.Entidades.LoginDTO
 
 class Login : AppCompatActivity() {
 
-    //solucionar problemas
+    //solucionar problemas dsds
     private lateinit var sharedViewModel: SharedViewModel
     private lateinit var userViewModel: UserViewModel
 
