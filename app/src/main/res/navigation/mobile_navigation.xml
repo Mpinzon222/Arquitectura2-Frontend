@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.practica.finazapp.Vista.UI.DashboardFragment"
+        android:label="@string/dashboard"
+        tools:layout="@layout/fragment_dashboard">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_reporte"
+        android:name="com.practica.finazapp.Vista.UI.Reporte"
+        android:label="@string/reporte"
+        tools:layout="@layout/fragment_reporte" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_ingresos"
+        android:name="com.practica.finazapp.Vista.UI.Ingresos"
+        android:label="@string/ingresos"
+        tools:layout="@layout/fragment_ingresos" >
+    </fragment>
+    <fragment
+        android:id="@+id/gastosAltos"
+        android:name="com.practica.finazapp.Vista.UI.GastosAltos"
+        android:label="Lista general de gastos"
+        tools:layout="@layout/fragment_gastos_altos" />
+    <fragment
+        android:id="@+id/fragmentAlertas"
+        android:name="com.practica.finazapp.Vista.UI.FragmentAlertas"
+        android:label="Alertas"
+        tools:layout="@layout/fragment_alertas" />
+    <fragment
+        android:id="@+id/fragmentProyecciones"
+        android:name="com.practica.finazapp.Vista.UI.FragmentProyecciones"
+        android:label="Recomendaciones"
+        tools:layout="@layout/fragment_proyecciones" />
+
+
+</navigation>

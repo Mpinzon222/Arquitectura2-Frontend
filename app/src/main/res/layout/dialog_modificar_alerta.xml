@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingHorizontal="16dp">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TxtVerdeMedianoItalic"
+        android:text="@string/modificar_alerta"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/editTextFecha"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="@string/fecha"
+        android:focusable="false"
+        android:clickable="true"
+        android:padding="4dp"
+        style="@style/EstiloEditText"
+        android:background="@drawable/bg_btn_borde_amarillo"
+        android:layout_margin="8dp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextIngresoLimite"
+        style="@style/EstiloEditText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_btn_borde_amarillo"
+        android:hint="Ingreso límite"
+        android:inputType="numberDecimal"
+        android:padding="4dp" />
+
+    <Button
+        android:id="@+id/btnEliminarAlerta"
+        style="@style/EstiloBordeVerde"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#001A41"
+        android:text="@string/eiminar_alerta"
+        android:textColor="@color/blanco"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtAlertaModificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TxtVerdePequenoItalic"
+        android:text="La alerta la puedes configurar para que te notifique en la app cuando te has pasado de un presupuesto limite en cada categoria."/>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permisos necesarios sin duplicados -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/principal"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/principal"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".Vista.PieChartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Vista.Alcancias_Compartidas"
+            android:exported="false" /> <!-- SplashActivity (actividad principal) -->
+        <activity
+            android:name=".Vista.UI.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Otras actividades -->
+        <activity
+            android:name=".Vista.Depositos"
+            android:exported="true" />
+        <activity
+            android:name=".Vista.UI.Recurrente"
+            android:exported="false" />
+        <activity
+            android:name=".Vista.UI.Recordatorios_Usuario"
+            android:exported="true" />
+        <activity
+            android:name=".Vista.UI.ListaGastos"
+            android:exported="false" />
+        <activity
+            android:name=".Vista.MainActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".Vista.UI.GastosAltos"
+            android:exported="false" />
+        <activity
+            android:name=".Vista.UI.Dashboard"
+            android:exported="true"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Vista.UI.Registro"
+            android:exported="true" />
+        <activity
+            android:name=".Vista.UI.Login"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Vista.UI.MainActivity"
+            android:exported="true" /> <!-- BroadcastReceiver -->
+        <receiver
+            android:name=".Notificaciones.RecordatorioReceiver"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

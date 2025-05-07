@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Vista.UI.ListaGastos">
+
+    <!-- Contenedor del icono y el título -->
+    <LinearLayout
+        android:id="@+id/layoutTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Imagen para regresar -->
+        <ImageView
+            android:id="@+id/devolverse"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/devolver"
+            android:contentDescription="Regresar"
+            android:layout_marginStart="25dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:text="Lista De Gastos"
+            android:textColor="#0F1250"
+            android:textSize="36sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <!-- Contenedor de iconos de búsqueda y eliminación -->
+    <LinearLayout
+        android:id="@+id/linearLayoutIcons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/busqueda"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/busque" />
+
+        <ImageView
+            android:id="@+id/serch"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/delete_24dp_bb271a_fill0_wght400_grad0_opsz24" />
+
+        <ImageView
+            android:id="@+id/update"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/system_update_alt_24dp_78a75a_fill0_wght400_grad0_opsz24" />
+    </LinearLayout>
+
+    <!-- RecyclerView para la lista de gastos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewGastos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutIcons">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <!-- Imagen cuando no hay gastos -->
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="35sp"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <ImageView
+        android:id="@+id/img_no_gastos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nogastos"
+        android:visibility="gone"
+        android:contentDescription="No hay gastos"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Texto cuando no hay gastos -->
+    <TextView
+        android:id="@+id/txt_no_gastos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No hay gastos registrados"
+        android:textSize="18sp"
+        android:textColor="@android:color/darker_gray"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/img_no_gastos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        tools:context=".Vista.UI.Login">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView2"
+            android:layout_width="367dp"
+            android:layout_height="370dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/finazapp" />
+
+        <TextView
+            android:id="@+id/txtUsuario"
+            style="@style/TxtVerdeGrandeNegrita"
+            android:layout_width="313dp"
+            android:layout_height="27dp"
+            android:layout_marginVertical="32dp"
+            android:gravity=""
+            android:text="@string/usuario1"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lottieAnimationView2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wrapperinputUsuario"
+            style="@style/EstiloBordeVerde"
+            android:layout_width="323dp"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundMode="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtUsuario">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtinputUsuario"
+                    style="@style/EstiloEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingEnd="48dp" />
+
+            </RelativeLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtContrasena"
+            style="@style/TxtVerdeGrandeNegrita"
+            android:layout_width="322dp"
+            android:layout_height="26dp"
+            android:layout_marginVertical="16dp"
+            android:gravity="left"
+            android:text="@string/contrasena"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/wrapperinputUsuario" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wrapperinputContrasena"
+            style="@style/EstiloBordeVerde"
+            android:layout_width="323dp"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundMode="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtContrasena">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtinputContrasena"
+                    style="@style/EstiloEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:paddingEnd="48dp" />
+
+                <ImageView
+                    android:id="@+id/btnMostrarOcultar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="Mostrar/Ocultar contraseña"
+                    android:padding="4dp"
+                    android:src="@drawable/invisible" />
+            </RelativeLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnIngresar"
+            style="@style/EstiloBtnVerde"
+            android:layout_width="280dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/ingresar"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wrapperinputContrasena" />
+
+
+        <Button
+            android:id="@+id/btnRegistrarse"
+            style="@style/EstiloBtnVerde"
+            android:layout_width="274dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="#4DDDEF"
+            android:text="@string/registrarse"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnIngresar" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
