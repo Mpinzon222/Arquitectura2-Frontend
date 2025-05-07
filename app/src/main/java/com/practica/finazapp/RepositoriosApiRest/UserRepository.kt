@@ -1,8 +1,6 @@
 package com.practica.finazapp.Repositories
 
 import android.content.Context
-import com.practica.finazapp.Entidades.LoginDTO
-import com.practica.finazapp.Entidades.LoginResponseDTO
 import com.practica.finazapp.Entidades.UsuarioDTO
 import com.practica.finazapp.Utils.Cliente
 import com.practica.finazapp.Utils.UsuarioService
