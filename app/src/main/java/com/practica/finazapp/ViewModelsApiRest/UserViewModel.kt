@@ -6,6 +6,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.distinctUntilChanged
+import com.practica.finazapp.Entidades.LoginDTO
+import com.practica.finazapp.Entidades.LoginResponseDTO
 import com.practica.finazapp.Entidades.UsuarioDTO
 import com.practica.finazapp.Repositories.UserRepository
 

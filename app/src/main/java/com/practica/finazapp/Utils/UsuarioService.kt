@@ -1,5 +1,7 @@
 package com.practica.finazapp.Utils
 
+import com.practica.finazapp.Entidades.LoginDTO
+import com.practica.finazapp.Entidades.LoginResponseDTO
 import com.practica.finazapp.Entidades.UsuarioDTO
 import retrofit2.Call
 import retrofit2.http.Body
