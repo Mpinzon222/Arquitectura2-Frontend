@@ -131,7 +131,6 @@ class Ingresos : Fragment(), IngresosListener {
 
                 // Crear el nuevo ingreso
                 val nuevoIngreso = IngresoDTO(
-                    id_ingreso = 0,
                     nombre_ingreso = descripcion,
                     valor = cantidadValor,
                     fecha = fecha,
