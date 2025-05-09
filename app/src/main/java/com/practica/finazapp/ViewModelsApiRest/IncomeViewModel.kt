@@ -131,7 +131,7 @@ class IncomeViewModel (application: Application) : AndroidViewModel(application)
         }
     }
 
-    // **Eliminar ingreso**
+    // **Eliminar ingreso correspondientes cuchauuuuuu**
     fun eliminarIngreso(idIngreso: Long) {
         repository.eliminarIngreso(idIngreso) { exito, error ->
             if (exito) {

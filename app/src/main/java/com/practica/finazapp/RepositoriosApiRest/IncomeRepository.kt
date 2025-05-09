@@ -187,6 +187,7 @@ class IncomeRepository(context: Context) {
 
         }
 
+    //Eliminar ingresos generales
     fun eliminarIngreso(idIngreso: Long, callback: (Boolean, String?) -> Unit) {
         ingresoService.eliminarIngreso(idIngreso).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
