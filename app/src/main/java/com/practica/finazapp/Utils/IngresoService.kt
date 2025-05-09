@@ -64,7 +64,7 @@ interface IngresoService {
         @Body ingresoDTO: IngresoDTO
     ): Call<IngresoDTO>
 
-    // Eliminar un ingreso
+    // Eliminar los ingresos correspondientes
     @DELETE("EliminarIngresos/{id_ingreso}")
     fun eliminarIngreso(
         @Path("id_ingreso") idIngreso: Long
