@@ -252,7 +252,7 @@ class Ingresos : Fragment(), IngresosListener {
     }
 
 
-
+    //eliminando ingresos
     @RequiresApi(Build.VERSION_CODES.O)
     private fun checkDataLoaded() {
         Log.d("FragmentIngresos", "Check datos cargados")

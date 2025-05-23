@@ -292,6 +292,7 @@ class SpendRepository (context: Context)  {
         })
     }
 
+    //Modifciar gastos
     fun modificarGasto(idGasto: Long, gastoDTO: GastoDTO, callback: (GastoDTO?, String?) -> Unit) {
         gastoService.modificarGasto(idGasto, gastoDTO).enqueue(object : Callback<GastoDTO> {
             override fun onResponse(call: Call<GastoDTO>, response: Response<GastoDTO>) {
@@ -343,6 +344,7 @@ class SpendRepository (context: Context)  {
         })
     }
 
+    //Eliminar gastos
     fun eliminarGastos(idUsuario: Long, categoria: String, callback: (Boolean, String?) -> Unit) {
         gastoService.eliminarGastos(idUsuario, categoria).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
@@ -361,8 +363,7 @@ class SpendRepository (context: Context)  {
         })
     }
 
-
-
+    //Eliminar gastos generales
     fun eliminarGasto(idGasto: Long, callback: (Boolean, String?) -> Unit) {
         gastoService.eliminarGasto(idGasto).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
