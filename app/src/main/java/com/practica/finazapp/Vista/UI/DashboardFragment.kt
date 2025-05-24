@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.icu.util.Calendar
@@ -71,7 +72,7 @@ class DashboardFragment : Fragment() {
         val lottieCampana = view.findViewById<LottieAnimationView>(R.id.lottieCampana)
 
         lottieCampana.setOnClickListener {
-
+            Recordatorios()
         }
 
         // Registrar un OnBackPressedCallback
@@ -425,7 +426,19 @@ class DashboardFragment : Fragment() {
 
 
     private fun mostrarListaDeGastos(recyclerView: RecyclerView, categoria: String) {
+        val intent = Intent(requireContext(), ListaGastos::class.java).apply {
+            putExtra("usuarioId", usuarioId)
+            putExtra("categoria", categoria)
+        }
+        startActivity(intent)
+    }
 
+    private fun Recordatorios() {
+
+        val intent = Intent(requireContext(), Recordatorios_Usuario::class.java).apply {
+            putExtra("usuarioId", usuarioId)
+        }
+        startActivity(intent)
     }
 
     fun cargarBarra(cantidad: Double, barra: View) {

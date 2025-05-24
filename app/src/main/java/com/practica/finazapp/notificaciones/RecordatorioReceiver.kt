@@ -12,7 +12,6 @@ import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import com.practica.finazapp.R
-import com.practica.finazapp.Vista.Recordatorios_Usuario
 import java.util.Date
 
 
